@@ -1,0 +1,202 @@
+.planet {
+    color: white;
+    padding-top: 10px;
+}
+
+
+.top {
+    max-width: 1000px;
+    display: flex;
+    margin: 0 auto;
+    padding-top: 125px;
+    height: 725px;
+}
+
+.topImage {
+    width: 400px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 60px;
+}
+
+.topImage img {
+    width: 100%;
+}
+
+
+.info {
+    margin-left: 100px;
+    width: 450px;
+}
+
+
+.info h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+}
+
+.info .desc {
+    color: rgb(185, 184, 184);
+}
+
+.info .source {
+    color: rgb(73, 73, 73);
+    padding: 15px 0px;
+}
+
+.info .source a {
+    color: gray;
+    position: relative;
+}
+
+.info .source img {
+    width: 20px;
+    position: absolute;
+    left: 72px;
+    top: -1px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.buttons button {
+    width: 100%;
+    padding: 12px 0;
+    margin: 5px 0;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    border: 1px solid lightgray;
+    text-align: left;
+    text-indent: 20px;
+}
+
+.buttons button span {
+    padding-right: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: lightgray;
+}
+
+.buttons button:focus {
+    background-color: rgb(163, 73, 248);
+    border: 1px solid rgb(163, 73, 248);
+}
+
+
+.bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.rottime, .revtime, .radius, .temp {
+    border: 1px solid gray;
+    padding: 12px 52px;
+}
+
+.bottom .bottomInfo p {
+    font-size: 14px;
+}
+
+.bottom .bottomContainer {
+    width: 1200px;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 1070px) {
+    .top {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .topImage {
+        margin: 0 auto;
+        min-height: 500px !important;
+    }
+
+    .info {
+        margin: 0 auto;
+        display: flex;
+        min-width: 700px;
+        max-width: 900px;
+        justify-content: space-between;
+    }
+
+    .infoWrapper {
+        max-width: 350px;
+        margin-left: 10px;
+    }
+
+    .desc {
+        max-width: 450px;
+        min-width: 250px;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 15px;
+    }
+
+    .buttons button {
+        width: 300px;
+    }
+
+    .bottom {
+        margin-top: 250px;
+    }
+
+    .bottomContainer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 0 45px ;
+        margin-bottom: 50px;
+    }
+
+    .bottomContainer div {
+        width: 300px;
+    }
+
+    .planet {
+        margin-left: -15px;
+    }
+}
+
+@media (max-width : 750px) {
+    .planet {
+        margin-left: 0px;
+    }
+
+    .topImage {
+        max-width: fit-content;
+        padding: 0 25px;
+    }
+
+    .info {
+        flex-direction: column;
+        margin: 0 auto ;
+        margin-top: -100px;
+        margin-left: 2%;
+    }
+
+    .buttons {
+        margin-left: -40px;
+    }
+
+    .bottom {
+        margin-top: 400px;
+    }
+
+    .desc {
+        padding: 0 35px 0 0;
+    }
+}

@@ -1,0 +1,173 @@
+.header {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 90px;
+    border-bottom: #838391 1px solid;
+    font-family: "Spartan", sans-serif;
+}
+
+.header nav {
+    margin-right: 1.5%;
+}
+
+.header nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header nav ul li {
+    list-style: none;
+    margin: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.header nav ul li:first-child {
+    margin-left: -15px;
+}
+
+.header nav ul li a {
+    color: rgb(224, 224, 224);
+    text-decoration: none;
+    transition: .2s ease-in;
+}
+
+.header nav ul li a:hover {
+    color: rgb(182, 174, 255);
+    transition: .2s ease-in;
+}
+
+.logo {
+    color: white;
+    margin-left: 2%;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color: rgb(182, 174, 255);
+    transition: .2s ease-in;
+}
+
+.activeMercury {
+    color: rgb(65, 158, 187) !important;
+}
+
+.activeVenus {
+    color: rgb(237, 162, 73) !important;
+}
+
+.activeEarth {
+    color: rgb(45, 104, 240) !important;
+}
+
+.activeMars {
+    color: rgb(209, 76, 50) !important;
+}
+
+.activeJupiter {
+    color: rgb(216, 58, 52) !important;
+}
+
+.activeSaturn {
+    color: rgb(205, 81, 32) !important;
+}
+
+.activeUranus {
+    color: rgb(30, 193, 162) !important;
+}
+
+.activeNeptune {
+    color: rgb(45, 104, 240) !important;
+}
+
+.burger {
+    position: absolute;
+    left: 1.5rem;
+    top: 1rem;
+    display: none;
+    cursor: pointer;
+}
+
+.line {
+    background-color: white;
+    margin: 7px 0;
+    display: block;
+    width: 37.5px;
+    height: 5px;
+    border-radius: 5px;
+}
+
+@media (max-width: 1070px) {
+    .header {
+        flex-direction: column;
+        padding: 25px;
+        border-bottom: none;
+        background-color: #070724;
+    }
+
+    .header nav {
+        padding: 0 25px 0 25px;
+        width: 100vw;
+        border-bottom: #838391 1px solid;
+    }
+}
+
+@media (max-width : 750px) {
+
+    .header {
+        border-bottom: #838391 1px solid;
+    }
+    
+    .header nav {
+        height: 100vh;
+        border-bottom: none;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 65px;
+        text-align: center;
+        background-color: rgb(112, 96, 255);
+        transition: all .5s ease-in;
+        z-index: 10;
+    }
+
+    .header nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: -300px;
+    }
+
+    .header nav ul li {
+        margin-left: 0;
+    }
+
+    .header nav ul li a {
+        color: white;
+        font-size: 18px;
+    }
+
+    .header nav ul li:first-child {
+        margin-left: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .opened {
+        transform: translateX(-100%);
+        transition: all .5s ease-in;
+    }
+}

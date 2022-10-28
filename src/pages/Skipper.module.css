@@ -1,0 +1,41 @@
+.toRight {
+    font-size: 58px;
+    color: white;
+    position: absolute;
+    top: 415px;
+    right: 55px;
+    transition: .2s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toRight:hover {
+    color: rgb(130, 108, 255);
+    transition: .2s ease;
+}
+
+.toLeft {
+    font-size: 58px;
+    color: white;
+    position: absolute;
+    top: 415px;
+    left: 55px;
+    transition: .2s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.toLeft:hover {
+    color: rgb(130, 108, 255);
+    transition: .2s ease;
+}
+
+@media (max-width : 1070px) {
+    .toLeft {
+        display: none;
+    }
+
+    .toRight {
+        display: none;
+    }
+}
