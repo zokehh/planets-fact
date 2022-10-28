@@ -28,6 +28,9 @@ const App = () => {
                     <Route path="/saturn" element={<Saturn />} />
                     <Route path="/uranus" element={<Uranus />} />
                     <Route path="/neptune" element={<Neptune />} />
+
+                    <Route path="/planets-fact/" element={<Navigate to='/welcome' />} />
+
                     <Route path='*' element={<NotFound />} />
                 </Routes>
             </div>
