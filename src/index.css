@@ -3,24 +3,15 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Antonio",sans-serif;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../public/background-stars.svg');
+  background-color: #070724;
+  background-size: cover;
   overflow-x: hidden;
 }
 
 * {
   box-sizing: border-box;
-}
-
-.container {
-  height: 100vh;
-  width: 100vw;
-  background-image: url('../public/background-stars.svg');
-  background-color: #070724;
-  background-size: cover;
-}
-
-
-@media (max-width : 1500px) {
-  .container {
-    height: 100%;
-  }
 }

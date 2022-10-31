@@ -1,0 +1,103 @@
+.container {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 85px;
+    padding: 0 35px;
+    margin-bottom: 25px;
+}
+
+.rottime, .revtime, .radius, .temp {
+    border: 1px solid gray;
+    padding: 0 25px;
+    height: 125px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rottime, .revtime, .radius, .temp p {
+    font-size: 12px;
+}
+
+.temp h1 {
+    font-size: 24px !important;
+}
+
+.rottime {
+    grid-area: rottime;
+}
+
+.revtime {
+    grid-area: revtime;
+}
+
+.radius {
+    grid-area: radius;
+}
+
+.temp {
+    grid-area: temp;
+}
+
+@media (max-width : 1165px) {
+    .rottime, .revtime, .radius, .temp {
+        height: 125px;
+        width: 200px;
+    }
+}
+
+@media (max-width : 1024px) {
+    .container {
+        margin-top: 225px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 25px;
+        width: 95% !important;
+    }
+
+    .rottime, .revtime, .radius, .temp >  p {
+        font-size: 11px;
+    }
+
+    .container div:first-child {
+        margin-left: 0px;
+    }
+}
+
+
+@media (max-width: 995px) {
+    .container {
+        max-width: 550px;
+        margin-top: 245px;
+    }
+}
+
+@media (max-width: 810px) {
+    .container {
+        margin-top: 215px;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .rottime, .revtime, .radius, .temp {
+        height: 90px;
+        width: 100% ;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-top: 125px;
+    }
+}

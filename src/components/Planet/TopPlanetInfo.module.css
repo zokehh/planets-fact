@@ -1,0 +1,195 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 75px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    grid-template-areas: 
+    "planet info"
+    "planet buttons";
+    height: 500px;
+}
+
+.topImage {
+    width: 100%;
+    grid-area: planet;
+}
+
+.topImage img {
+    width: 75%;
+    margin-top: 5%;
+    margin-left: 100px;
+}
+
+.info {
+    grid-area: info;
+    max-width: 450px;
+    font-size: 18px;
+}
+
+.info h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.info .desc {
+    color: rgb(197, 183, 183);
+    line-height: 26px;
+    text-align: justify;
+}
+
+.info .source {
+    color: rgb(121, 115, 115);
+}
+
+.info .source > a:visited {
+    color: blue;
+}
+
+.info .source > a {
+    letter-spacing: 1.5px;
+}
+
+.buttons {
+    grid-area: buttons;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-left: -100px;
+}
+
+.buttons > button {
+    margin-bottom: 10px;
+    padding: 0 36px;
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+}
+
+.buttons > button span {
+    margin-right: 25px;
+    margin-left: -10px;
+}
+
+.buttons > button.buttonActive {
+    margin-bottom: 10px;
+    background-color: rgb(102, 75, 255);
+    border: 1px solid rgb(102, 75, 255);
+}
+
+
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-areas: 
+        "planet planet"
+        "info buttons";
+    }
+
+    .info {
+        margin-left: 35px;
+    }
+
+    .desc {
+        text-align: justify;
+    }
+
+    .buttons {
+        width: auto;
+        margin-left: 50px;
+    }
+
+    .buttons button {
+        width: 35vw;
+    }
+
+    .topImage {
+        width: 350px;
+        min-height: 375px;
+        margin: 0 auto;
+    }
+    
+    .topImage img {
+        width: 350px;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+}
+
+@media (max-width: 810px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "buttons buttons"
+        "planet planet"
+        "info info";
+    }
+
+    .topImage {
+        margin-top: 0px !important;
+    }
+
+    .buttons {
+        margin-top: -125px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 12px;
+        width: 325px;
+        margin-left: 0 ;
+    }
+    
+    .buttons button {
+        margin-left: 0;
+        background-color: transparent !important;
+        border: none;
+        padding: 0 12px;
+        text-align: center;
+        text-align: center !important;
+    }
+
+    .buttons button.buttonActive {
+        border: none;
+        border-bottom: 1px solid rgb(102, 75, 255);
+    }
+
+    .info {
+        text-align: center;
+        margin-left: 0;
+        padding: 25px;
+    }
+
+    .info h1 {
+        font-size: 48px;
+    }
+
+    .info .desc {
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topImage {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        margin-bottom: -50px;
+        width: 90vw;
+        margin-top: -75px !important;
+    }
+
+    .topImage img {
+        width: 65%;
+        height: 65%;
+    }
+}

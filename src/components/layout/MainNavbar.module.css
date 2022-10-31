@@ -1,17 +1,19 @@
 .header {
-    width: 100%;
-    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
+    position: relative;
     height: 90px;
-    border-bottom: #838391 1px solid;
-    font-family: "Spartan", sans-serif;
+    border-bottom: 1px solid rgb(128, 120, 120);
+    font-weight: bold;
 }
 
-.header nav {
-    margin-right: 1.5%;
+.header .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 25px;
 }
 
 .header nav ul {
@@ -22,40 +24,12 @@
 
 .header nav ul li {
     list-style: none;
-    margin: 15px;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.header nav ul li:first-child {
-    margin-left: -15px;
 }
 
 .header nav ul li a {
-    color: rgb(224, 224, 224);
-    text-decoration: none;
-    transition: .2s ease-in;
-}
-
-.header nav ul li a:hover {
-    color: rgb(182, 174, 255);
-    transition: .2s ease-in;
-}
-
-.logo {
     color: white;
-    margin-left: 2%;
-    font-size: 24px;
-    font-weight: bold;
     text-decoration: none;
-    transition: .2s ease-in;
-    cursor: pointer;
-}
-
-.logo:hover {
-    color: rgb(182, 174, 255);
-    transition: .2s ease-in;
+    padding-right: 25px;
 }
 
 .activeMercury {
@@ -91,83 +65,75 @@
 }
 
 .burger {
-    position: absolute;
-    left: 1.5rem;
-    top: 1rem;
+    font-size: 36px;
     display: none;
-    cursor: pointer;
 }
 
-.line {
-    background-color: white;
-    margin: 7px 0;
-    display: block;
-    width: 37.5px;
-    height: 5px;
-    border-radius: 5px;
-}
-
-@media (max-width: 1070px) {
+@media (max-width: 1024px) {
     .header {
+        border-bottom: none;
         flex-direction: column;
-        padding: 25px;
-        border-bottom: none;
-        background-color: #070724;
+        margin-top: 25px;
+    }
+
+    .header .logo {
+        margin-left: 0;
     }
 
     .header nav {
-        padding: 0 25px 0 25px;
+        border-bottom: 1px solid gray;
         width: 100vw;
-        border-bottom: #838391 1px solid;
-    }
-}
-
-@media (max-width : 750px) {
-
-    .header {
-        border-bottom: #838391 1px solid;
-    }
-    
-    .header nav {
-        height: 100vh;
-        border-bottom: none;
-        position: absolute;
         display: flex;
         justify-content: center;
+        margin-left: -15.5px;
+    }
+}
+
+@media (max-width: 810px) {
+    .header {
+        height: 75px;
+    }
+    
+    .cnt {
+        display: flex;
+        border-bottom: 1px solid gray;
+        justify-content: space-between;
         align-items: center;
-        margin-top: 65px;
-        text-align: center;
-        background-color: rgb(112, 96, 255);
-        transition: all .5s ease-in;
+        height: 90px;
+        width: 100%;
+        padding: 12px 24px 12px 24px;
+        background-color: #070724;
+        z-index: 100;
+        margin-top: -24px;
+    }
+
+    .header nav {
+        position: absolute;
+        transition: .3s ease;
+        height: 100vh;
+        width: 104vw;
         z-index: 10;
+        background-color: rgb(24, 30, 61);
+        text-shadow: 1px 1px  black;
+        transform: translateX(-100%);
+    }
+
+    .opened {
+        transform: translateX(0%) !important;
     }
 
     .header nav ul {
-        display: flex;
+        margin-top: 150px;
+        justify-content: flex-start;
         flex-direction: column;
-        align-items: flex-start;
-        margin-top: -300px;
     }
 
-    .header nav ul li {
-        margin-left: 0;
-    }
-
-    .header nav ul li a {
-        color: white;
-        font-size: 18px;
-    }
-
-    .header nav ul li:first-child {
-        margin-left: 0;
+    .header nav ul li:not(:last-child) {
+        margin-bottom: 25px;
     }
 
     .burger {
         display: block;
-    }
-
-    .opened {
-        transform: translateX(-100%);
-        transition: all .5s ease-in;
+        position: relative;
     }
 }
