@@ -48,6 +48,7 @@
     .rottime, .revtime, .radius, .temp {
         height: 125px;
         width: 200px;
+        margin-bottom: 50px;
     }
 }
 
@@ -70,10 +71,18 @@
 }
 
 
-@media (max-width: 995px) {
+@media (max-width: 1012px) {
     .container {
         max-width: 550px;
         margin-top: 245px;
+    }
+
+    .rottime, .revtime {
+        margin-bottom: 0;
+    }
+
+    .radius, .temp {
+        margin-bottom: 50px;
     }
 }
 
@@ -81,6 +90,7 @@
     .container {
         margin-top: 215px;
     }
+    
 }
 
 @media (max-width: 550px) {
@@ -93,6 +103,9 @@
         align-items: center;
         padding: 15px;
         justify-content: space-between;
+    }
+    .radius {
+        margin-bottom: 0;
     }
 }
 
